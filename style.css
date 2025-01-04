@@ -39,3 +39,28 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(https://media.discordapp.net/attachments/1320393830616273008/1324900025347735563/file-7DZ48NomRnaYNHhD8Fpxcv_1.webp?ex=6779d4cd&is=6778834d&hm=5b2246ec885f4eabb811afff21394eb75dbcbf1ebac0163b0a6e9beced14d3d6&=&format=webp&width=840&height=480) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-login {
+    color: #fff;
+    background-color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+

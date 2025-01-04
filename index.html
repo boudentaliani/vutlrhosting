@@ -67,29 +67,34 @@
         </div>
     </section>
 
-    <section class="projects" id="projects">
+    <script>
+        function showLoginPanel() {
+            document.getElementById('projects').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <a href="#" class="main-btn" onclick="showLoginPanel()">Look at the offers</a>
+    
+    <section class="projects hidden" id="projects">
         <h2 class="title">Login Panel</h2>
         <div class="content">
             <div class="project-card">
-                <div class="project-image">
-                    <img src="images/work1.jpg" />
+                <div class="login-container">
+                    <h2>Login</h2>
+                    <form>
+                        <input type="text" placeholder="Username" required>
+                        <input type="password" placeholder="Password" required>
+                        <div class="button-container">
+                            <button type="submit">Login</button>
+                            <button type="button">Create Account</button>
+                        </div>
+                    </form>
                 </div>
-                <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <div class="button-container">
-                <button type="submit">Login</button>
-                <button type="button">Create Account</button>
-            </div>
-        </form>
-    </div>
-</body>
             </div>
         </div>
     </section>
+</body>
 
     <section class="cards contact" id="contact">
         <h2 class="title">To communicate</h2>

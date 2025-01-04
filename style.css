@@ -23,6 +23,12 @@
     transition: 0.7s ease;
 }
 
+.social-icons a {
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+
 .navigation a{
     color: #3a6cf4;
     text-decoration: none;

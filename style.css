@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+/*login panel*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+  
+.login-container {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    margin: 50px auto 0; /* Added margin-top to separate from header */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }  
+
+/* تنسيق الـ Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #333;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* توسيط العناصر داخل الـ sidebar */
+}
+
+/* Home Button Styling */
+.offer-bouden {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 18px;
+    border-radius: 0px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start; /* Align the image and text to the left */
+    align-items: center;
+    position: relative;
+}
+
+/* Icon inside the Home button */
+.item-bouden {
+    width: 20px; /* Adjust width as per the size of your icon */
+    height: 50px; /* Adjust height as needed */
+    margin-right: 10px; /* Space between image and text */
+}
+
+/* Text styling for Home */
+.offer-bouden span {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect for Home button */
+.offer-bouden:hover {
+    background-color: blue;
+    color: rgb(19, 19, 19);
+}
+
+/* Style de base pour le contenu de la dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.toggle-list {
+    display: none;
+}
+
+/* Style for the button when clicked */
+.offer-bouden label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 40px; /* Adjust to create space below the button */
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Display the dropdown when checkbox is checked */
+.toggle-list:checked + label + .dropdown-content {
+    display: block;
+}
+
+/* Styling for dropdown links */
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    display: block;
+}
+
+/* Option hover effect */
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+/* Extra buttons section */
+.extra-buttons {
+    margin-top: 20px; /* Add some space between the dropdown and the extra-buttons */
+}
+
+/* Style for the extra buttons */
+.extra-buttons .offer-bouden {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add space between buttons */
+}
+
+
+/* توسيط الـ label الذي يحتوي على كلمة حسابات */
+.account-label {
+    text-align: center; /* توسيط النص */
+    width: 100%;
+}
+
+/* تنسيق كلمة الحسابات */
+.account-label h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* مخفي الـ checkbox */
+.account-toggle {
+    display: none;
+}
+
+/* خيارات الحسابات (مخفية بشكل افتراضي) */
+.account-options {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.account-options a {
+    display: block;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    background-color: #555;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.account-options a:hover {
+    background-color: blue;
+}
+
+/* إظهار الـ options عندما الـ checkbox يكون مفعلاً */
+.account-toggle:checked + .account-options {
+    display: block;
+}
+
+
+/* إضافة الأيقونات كأزرار */
+.icon-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.icon-btn img {
+    width: 24px; /* قم بتحديد الحجم المناسب للصورة */
+    height: 24px;
+}
+
+.icon-btn:hover {
+    background-color: blue;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(https://imageonline.co/bg/neutral-black-background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body {
+    background: url('https://imageonline.co/bg/neutral-black-background.png') no-repeat center center fixed;
+    background-size: cover; /* لتغطية كامل الخلفية */
+    font-family: 'Poppins', sans-serif; /* استخدام نفس الخط المستخدم في الموقع */
+    margin: 0;
+    padding: 0;
+}
+
+.announcement-toggle {
+    display: none;
+}
+
+/* تنسيق زر الإعلان */
+.announcement-btn {
+    display: block;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+.announcement-btn:hover {
+    background-color: #ff4500;
+}
+
+/* تنسيق شاشة الإعلان */
+.announcement-screen {
+    width: 80%;
+    max-width: 600px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* مخفية افتراضياً */
+}
+
+/* إظهار شاشة الإعلان عند الضغط على الزر */
+.announcement-toggle:checked + .announcement-screen {
+    display: block;
+}
+
+.projects {
+    background: url('https://imageonline.co/bg/neutral-black-background.png') no-repeat center center;
+    background-size: cover;
+    padding: 100px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.location {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.location .icon {
+    font-size: 2em;
+    color: #3a6cf4;
+}
+
+
+.cards {
+    background: url('https://imageonline.co/bg/neutral-black-background.png') no-repeat center center;
+    background-size: cover;
+    padding: 50px 0; 
+}
+
+.projects {
+    background: url('https://imageonline.co/bg/neutral-black-background.png') no-repeat center center;
+    background-size: cover;
+    padding: 50px 0; 
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 0.1px;
+    color: #4e9eff;
+    font-size: 2.1em;
+    font-weight: 999;
+}
+
+.main h3 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3{
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+    
+}
+
+.projects {
+    background-color: #000016;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover {
+   transform: scale(1.1);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+ }
+
+.project-image img{
+    width: 100%
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details:hover {
+    color: #601cfc;
+}
+
+.contact .icon{
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+
+.contact .info p {
+    font-size: 1.5em;
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 10px 20px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
+
+.store-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 60px;
+}
+
+.image-container img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 60px;
+    margin-top: 50px;
+}
+
+.offers {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.offer {
+    width: 210px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.offer:hover {
+    transform: scale(1.1);
+}
+
+.offer img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.offer-btn {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.offer-btn:hover {
+    color: blue;
+}
+
+</style>

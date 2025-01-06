@@ -1,0 +1,98 @@
+<!-- store.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="sidebar-container">
+    <!-- زر التحكم بالـ Sidebar (يظهر فقط على الهاتف) -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+    <label for="sidebar-toggle" class="sidebar-toggle-btn">☰</label>
+
+    <div class="sidebar">
+        <!-- حسابات -->
+        <label for="account-toggle" class="account-label">
+            <h4>Accounts</h4>
+        </label>
+        <input type="checkbox" id="account-toggle" class="account-toggle">
+        <div class="account-options">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+
+        <!-- أيقونات -->
+        <div class="icon-buttons">
+            <a href="file:///C:/Users/Bouden/Desktop/vutlrhosting/gallery/panier%20(1).svg" class="icon-btn">
+                <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325628954081755259/4625869.png?ex=677c7bab&is=677b2a2b&hm=2b403abf840047d741d906e3da450b7ee75e81b3d56c5d3dd12335bc9ada0431&" alt="Shop">
+            </a>
+            <a href="login.html" class="icon-btn">
+                <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325624894393942058/7065716.png?ex=677c77e3&is=677b2663&hm=b245e84e19eedbfc5a9251934f3ac5dedf7d070c49a8f34917c1cf868a86ce47&" alt="Messages">
+            </a>
+            <a href="file:///C:/Users/Bouden/Desktop/vutlrhosting/gallery/utilisateurs%20(2).svg" class="icon-btn">
+                <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325629402330955836/7065754.png?ex=677c7c16&is=677b2a96&hm=7f67500a228d4fbbd53f3908e482947c634bb9acd4f81af5765d36d93fdd618a&" alt="Settings">
+            </a>
+        </div>
+
+        <!-- أزرار إضافية -->
+<div class="extra-buttons">
+    <!-- زر Home -->
+    <div class="offer-bouden">
+        <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325630158195134596/5684647.png" alt="Home Icon" class="item-bouden">
+        <h7><span>Home</span></h7>
+    </div>
+
+    <!-- زر Menu -->
+    <div class="offer-bouden bouden-menu">
+        <input type="checkbox" id="bouden-toggle">
+        <label for="bouden-toggle" class="bouden-btn">▼
+            <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325630158195134596/5684647.png" alt="Menu Icon" class="item-bouden">
+            <h7><span>Menu</span></h7>
+        </label>
+        <div class="bouden-content">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+        
+
+<body>
+    <div class="image-container">
+        <img src="https://velocityhost.tn/store/templates/digit/img/theme-dark-domain-bg.png" alt="Hosting Service">
+    </div>
+
+    <div class="offers">
+        <div class="offer" onclick="showPopup()">
+            <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325640547221639208/3276528.png?ex=677c8677&is=677b34f7&hm=55a4bc2d1a42b1a2ba89d046a6e82a2aac3e83d894ef5a847050fd3020b0d24c&" alt="globe">
+            <a href="buy-demain.html" class="offer-btn">Buy A Demain</a>
+        </div>
+        <div class="offer" onclick="showPopup()">
+            <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325641170306732114/5695438.png?ex=677c870c&is=677b358c&hm=28aaa7da42c4a0258647fe55fa193368ed9cefdb30be4f4217d5fbaa82b8496d&" alt="globe">
+            <button class="offer-btn">Odere Hosting</button>
+        </div>
+        <div class="offer" onclick="showPopup()">
+            <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325641180045774970/4098171.png?ex=677c870e&is=677b358e&hm=01e90c781ecb754e4b62061a520939b02b0243cbedd437e0cbe7c270da2cb04f&" alt="LinkedIn">
+            <button class="offer-btn">Methode Payment</button>
+        </div>
+        <div class="offer" onclick="showPopup()">
+            <img src="https://cdn.discordapp.com/attachments/1320393830616273008/1325640555442606180/5695500.png?ex=677c8679&is=677b34f9&hm=cce1f2061433483f8b128c0a3ebbd0eb845bfaf5b53b1fcff962df593c8ef933&" alt="LinkedIn">
+            <button class="offer-btn">Get Support</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            console.log("2");  // Ba3d najmou nbadlouha b popup wla action o5ra
+        }
+    </script>
+
+</body>
+</html>

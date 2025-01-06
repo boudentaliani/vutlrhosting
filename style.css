@@ -805,6 +805,26 @@ body {
     transition: opacity 0.5s ease, transform 0.5s ease; /* تأثير الانتقال */
 }
 
-/* إظهار القائمة
+/* إظهار القائمة عند اختيار الـ checkbox */
+.toggle-input:checked + .toggle-label + .menu {
+    display: block;
+    opacity: 1; /* إظهار المينو */
+    transform: translateY(0); /* إرجاع المينو إلى مكانه */
+}
 
+/* تصميم عناصر القائمة */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #f0f0f0; /* تأثير عند المرور بالفأرة */
+}
 </style>
